@@ -4,9 +4,9 @@
  * _strspn - Entry point
  * @s: input
  * @accept: input
- * Return: Always 0(Success)
+ * Return: Always 0 (Success)
  */
-unsigned int_strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int n = 0;
 	int r;
@@ -27,5 +27,4 @@ unsigned int_strspn(char *s, char *accept)
 	}
 	return (n);
 }
-
 
