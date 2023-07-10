@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 /**
- * create_array: Entry point
- * @size: size of array
+ *  create_array: Entry point
+ * @size: size of the array
  * @c: character
  * Return: A pointer to the array, or NULL if it fails or unsuccessful
  */
