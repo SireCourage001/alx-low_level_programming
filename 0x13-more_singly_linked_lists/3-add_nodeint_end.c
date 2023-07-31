@@ -6,23 +6,32 @@
  * @n: integer to be included in the new node.
  * Return: the address of the new element, or NULL if it fails.
  */
-listint_t *add_nodeint_end(listint_t **head, const int n);
+listint_t *add_nodeint_end_rec(listint_t *head, listint_t *tmp_node)
 {
-	listint_t *tmp_node = NULL, *new_node = malloc(sizeof(listint_t));
+	if (head->next)
+		tmp_node = add_nodeint_end_rec(head->next, tmp_node);
+	else
+		head->next = tmp_node;
+	return (tmp_node);
+}
+/**
+ * add_nodeint_end - adds the element at the end  of a listint_t
+ * list recursively.
+ * @head: double pointer to list.
+ * @n: integer to be added into the new node.
+ * Return: the address of the new element, or NULL if it failed.
+ */
+listint_t *add_nodeint_end(listint_t **head, const int n)
+{
+	listint_t *tmp_node = malloc(sizeof(listint_t));
 
-	if (new_node)
-	{
-		new_node->n = n;
-		if (*head)
-		{
-			tmp_node = *head;
-			while (tmp_node->next)
-				tmp_node = tmp_node->next;
-			tmp_node->next = new_node;
-			new_node->prev = tmp_node;
-		}
-		else
-			*head = new_node;
-	}
-	return (new_node);
+	if (!tmp_node)
+		return (NULL);
+	if (*head)
+		tmp_node = add_nodeint_end_rec(*head, tmp_node);
+	else
+		*head = tmp_node;
+	tmp_node->n = n;
+	tmp_node->next = NULL;
+	return (tmp_node);
 }
