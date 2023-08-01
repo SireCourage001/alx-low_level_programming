@@ -4,13 +4,16 @@
  * @h: linked list of type listint_t to traverse
  * Return: number of nodes
  */
- * size_t listint_len(const listint_t *h)
+ size_t listint_len(const listint_t *h);
 {
-	size_t num = 0;
-	while (h)
+	const listint_t *node = h;
+	size_t cont = 0;
+
+	while (node)
 	{
-		num++;
-		h = h->next;
+		cont++;
+		node = node->next;
 	}
-	return (num);
+	return (cont);
+}
 }
