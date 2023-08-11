@@ -3,6 +3,7 @@
 
 /**
  * struct list_s - singly linked list
+<<<<<<< HEAD
  * @str: string - (malloc string)
  * @len: length of the string
  * @next: point to the next node
@@ -10,6 +11,16 @@
  * Description: singly linked list node structure
  * by Courage for ALX project
  * typedef struct list_s
+=======
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * ALX_project
+ */
+typedef struct list_s
+>>>>>>> 359daf1a4f6765d61113e7ca8e38c1744eb107a1
 {
 	char *str;
 	unsigned int len;
