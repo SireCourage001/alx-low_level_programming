@@ -8,7 +8,11 @@
  * @next: points to the next node
  *
  * Description: singly linked list node structure
+<<<<<<< HEAD
  * by Courage for ALX_project
+=======
+ * ALX_project
+>>>>>>> 26244602881d0491d22db1eef716627018811779
  */
 typedef struct list_s
 {
