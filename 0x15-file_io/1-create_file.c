@@ -1,9 +1,15 @@
 #include "main.h"
 
 /**
+<<<<<<< HEAD
 * create_file - create a new file,
 * @filename: A pointer to the name of the new file created,
 * @text_context: A pointer to a string to write to the file.
+=======
+* crete_file - create  file.
+* @filename: A pointer to the name of the file created.
+* @text_content: A pointer to a string to write to the file.
+>>>>>>> 359daf1a4f6765d61113e7ca8e38c1744eb107a1
 * Return: If the function fails -1,
 * Otherwise 1.
 */
@@ -28,6 +34,12 @@ if (fd == -1 || w == -1)
 return (-1);
 
 close(fd);
+<<<<<<< HEAD
 
 return (1);
 }
+=======
+return (1);
+}
+
+>>>>>>> 359daf1a4f6765d61113e7ca8e38c1744eb107a1
