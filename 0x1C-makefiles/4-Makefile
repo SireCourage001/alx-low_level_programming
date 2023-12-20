@@ -1,7 +1,7 @@
 CC = gcc
-SRC = main.c School.c
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
-NAME = School
+NAME = school
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
